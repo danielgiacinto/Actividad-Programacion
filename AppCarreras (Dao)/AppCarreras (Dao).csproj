@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{17A33C09-D419-4836-A776-BF46404D42D7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>AppCarreras__Dao_</RootNamespace>
+    <AssemblyName>AppCarreras %28Dao%29</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Capa de Acceso a Datos\HelperDAO.cs" />
+    <Compile Include="Capa de Acceso a Datos\IDao.cs" />
+    <Compile Include="Capa de Presentacion\frmCargarAsignatura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Capa de Presentacion\frmCargarAsignatura.Designer.cs">
+      <DependentUpon>frmCargarAsignatura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Capa de Presentacion\frmConsultarCarrera.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Capa de Presentacion\frmConsultarCarrera.Designer.cs">
+      <DependentUpon>frmConsultarCarrera.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Capa de Presentacion\frmNuevaCarrera.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Capa de Presentacion\frmNuevaCarrera.Designer.cs">
+      <DependentUpon>frmNuevaCarrera.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Capa de Presentacion\frmReporte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Capa de Presentacion\frmReporte.Designer.cs">
+      <DependentUpon>frmReporte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Capa de Presentacion\Reportes\DSListado.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSListado.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dominio\Asignatura.cs" />
+    <Compile Include="Dominio\Carrera.cs" />
+    <Compile Include="Dominio\DetalleCarrera.cs" />
+    <Compile Include="Capa de Presentacion\frmPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Capa de Presentacion\frmPrincipal.Designer.cs">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dominio\Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Capa de Presentacion\frmCargarAsignatura.resx">
+      <DependentUpon>frmCargarAsignatura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Capa de Presentacion\frmConsultarCarrera.resx">
+      <DependentUpon>frmConsultarCarrera.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Capa de Presentacion\frmNuevaCarrera.resx">
+      <DependentUpon>frmNuevaCarrera.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Capa de Presentacion\frmPrincipal.resx">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Capa de Presentacion\frmReporte.resx">
+      <DependentUpon>frmReporte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Capa de Presentacion\Reportes\ListadoCarreras.rdlc" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Capa de Presentacion\Reportes\DSListado.xsc">
+      <DependentUpon>DSListado.xsd</DependentUpon>
+    </None>
+    <None Include="Capa de Presentacion\Reportes\DSListado.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSListado.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Capa de Presentacion\Reportes\DSListado.xss">
+      <DependentUpon>DSListado.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
